@@ -27,7 +27,7 @@ export default function Home() {
           {/* Edit <code>src/App.js</code> and save to reload. */}
           {message}
         </p>
-        <Link to="/example">
+        <Link to="/pwa/example">
           Example
         </Link>
       </header>

@@ -11,9 +11,13 @@ export default function Example() {
       <header>
         <img src={logo} alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit
+          {' '}
+          <code>src/App.js</code>
+          {' '}
+          and save to reload.
         </p>
-        <Link to="/">
+        <Link to="/pwa">
           Home
         </Link>
       </header>
