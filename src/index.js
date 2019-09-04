@@ -6,4 +6,11 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-serviceWorker.register();
+serviceWorker.register(() => ({
+  onUpdate: (registration) => {
+    console.log('onUpdate', registration);
+  },
+  onSuccess: (registration) => {
+    console.log('onSuccess', registration);
+  },
+}));

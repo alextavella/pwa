@@ -8,12 +8,12 @@ import api from '../../services/api';
 import { Container } from './styles';
 
 export default function Home() {
-  const [message, setMessage] = useState(null);
+  const [hello, setHello] = useState(null);
 
   useEffect(() => {
     async function load() {
-      const response = await api.get('/5d6e949432000075a0a8a9cf');
-      setMessage(response.data.message);
+      const response = await api.get('/hello');
+      setHello(response.data);
     }
 
     load();
@@ -23,10 +23,14 @@ export default function Home() {
     <Container>
       <header>
         <img src={logo} alt="logo" />
-        <p>
-          {/* Edit <code>src/App.js</code> and save to reload. */}
-          {message}
-        </p>
+        {hello && (
+          <>
+            <p>{hello.message}</p>
+            <p>{hello.today}</p>
+            <p>{hello.date}</p>
+            <p>{hello.timer}</p>
+          </>
+        )}
         <Link to="/pwa/example">
           Example
         </Link>

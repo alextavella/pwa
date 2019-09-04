@@ -31,7 +31,9 @@ module.exports = {
     "react-hooks/exhaustive-deps": "off",
 
     "import/prefer-default-export": "off",
+    "implicit-arrow-linebreak": "off",
 
+    "no-shadow": "off",
     "no-console": "off",
     "no-restricted-globals": "off",
     "no-use-before-define": "off",
